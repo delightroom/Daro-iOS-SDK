@@ -32,13 +32,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Daro",
-            url: "https://github.com/delightroom/daro-ios-sdk/releases/download/1.1.68/Daro.xcframework.zip",
-            checksum: "2c05f8848e48f77d4d5bfeb46e99b0e8bf8dcc62561e64630682e344480b1f90"
+            url: "https://github.com/delightroom/daro-ios-sdk/releases/download/1.2.6-pre.1/Daro.xcframework.zip",
+            checksum: "70572d03abbd9977e3a599c04a7be90a2a239998a0f1d85d34460757ebcd6bd6"
         ),
         .binaryTarget(
             name: "DaroObjCBridge",
-            url: "https://github.com/delightroom/daro-ios-sdk/releases/download/1.1.68/DaroObjCBridge.xcframework.zip",
-            checksum: "32793a43d21031cdf584eb9364218cc6760e8253e76f22a749d206ea49672e19"
+            url: "https://github.com/delightroom/daro-ios-sdk/releases/download/1.2.6-pre.1/DaroObjCBridge.xcframework.zip",
+            checksum: "68e0593fc86213e8863c8aacaa3c91a5f1e0d8d63062bed910ab98c10b4cc260"
         ),
         .target(
             name: "DaroAds",
