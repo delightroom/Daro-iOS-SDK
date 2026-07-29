@@ -20,6 +20,7 @@ Pod::Spec.new do |spec|
   spec.resource_bundles = {
     'DaroObjCBridgeResources' => ['DaroObjCBridge.xcframework/ios-arm64/DaroObjCBridge.framework/PrivacyInfo.xcprivacy']
   }
+  spec.resources = ['DaroObjCBridge.xcframework/ios-arm64/DaroObjCBridge.framework/PrebidMobile_PrebidMobile.bundle']
 
   spec.static_framework = true
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
