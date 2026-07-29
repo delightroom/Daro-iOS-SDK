@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.resource_bundles = {
     'DaroAdsResources' => ['Daro.xcframework/ios-arm64/Daro.framework/PrivacyInfo.xcprivacy']
   }
+  spec.resources = ['Daro.xcframework/ios-arm64/Daro.framework/PrebidMobile_PrebidMobile.bundle']
 
   spec.static_framework = true
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
