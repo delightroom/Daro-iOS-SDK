@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Daro",
+    name: "PrebidMobile",
     platforms: [.iOS(.v13)],
     products: [
         .library(name: "DaroAds", targets: ["DaroAds"]),
@@ -44,6 +44,7 @@ let package = Package(
             name: "DaroAds",
             dependencies: [
                 "Daro",
+                "PrebidMobile",
                 .product(name: "GoogleMobileAds",              package: "swift-package-manager-google-mobile-ads"),
                 .product(name: "MetaAdapterTarget",            package: "googleads-mobile-ios-mediation-meta"),
                 .product(name: "PangleAdapterTarget",          package: "googleads-mobile-ios-mediation-pangle"),
@@ -65,6 +66,7 @@ let package = Package(
             name: "DaroObjCBridgeAds",
             dependencies: [
                 "DaroObjCBridge",
+                "PrebidMobile",
                 .product(name: "GoogleMobileAds",              package: "swift-package-manager-google-mobile-ads"),
                 .product(name: "MetaAdapterTarget",            package: "googleads-mobile-ios-mediation-meta"),
                 .product(name: "PangleAdapterTarget",          package: "googleads-mobile-ios-mediation-pangle"),
@@ -81,6 +83,15 @@ let package = Package(
                 .product(name: "PubMaticAdapterTarget",        package: "googleads-mobile-ios-mediation-pubmatic"),
             ],
             path: "SPM/DaroObjCBridgeAds"
+        ),
+        .target(
+            name: "PrebidMobile",
+            path: "SPM/PrebidMobileResources/Sources/PrebidMobile",
+            resources: [
+                .copy("mraid.js"),
+                .copy("omsdk.js"),
+            ],
+            publicHeadersPath: "include"
         ),
     ]
 )
