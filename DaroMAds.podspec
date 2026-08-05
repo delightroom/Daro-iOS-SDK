@@ -16,11 +16,11 @@ Pod::Spec.new do |spec|
     'DaroMAdsResources' => ['DaroM.xcframework/ios-arm64/DaroM.framework/PrivacyInfo.xcprivacy']
   }
 
-  spec.static_framework = false
+  spec.static_framework = true
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   spec.vendored_frameworks = 'DaroM.xcframework'
 
-  spec.dependency 'AppLovinSDK', '13.4.0'
+  spec.dependency 'AppLovinSDK', '13.6.0'
   spec.dependency 'AppLovinMediationGoogleAdapter', '12.8.0.0'
   spec.dependency 'AppLovinMediationFacebookAdapter', '6.20.1.0'
   spec.dependency 'AppLovinMediationByteDanceAdapter', '7.6.0.6.0'
@@ -28,8 +28,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationVungleAdapter', '7.5.3.0'
   spec.dependency 'AppLovinMediationFyberAdapter', '8.4.1.0'
   spec.dependency 'AppLovinMediationMintegralAdapter', '7.7.9.0.0'
-  spec.dependency 'AmazonPublisherServicesSDK', '5.3.0'
-  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter', '5.3.0.0'
   spec.dependency 'AppLovinMediationVerveAdapter', '3.7.0.0'
   spec.dependency 'AppLovinMediationIronSourceAdapter', '8.11.0.0.0'
   spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.16.1.0'
