@@ -25,11 +25,6 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   spec.vendored_frameworks = 'DaroMObjCBridge.xcframework'
 
-  # INTEGRATION KEY 도구 (DARO-908). zip 의 Scripts/ 에 해제기 CLI 와 post_install
-  # 훅이 실린다 — 이 선언이 없으면 CocoaPods 가 Pods/<pod>/ 를 만들 때 전부 버린다
-  # (실측: 없으면 디렉토리 자체가 안 생긴다).
-  spec.preserve_paths = 'Scripts/*'
-
   spec.dependency 'AppLovinSDK', '13.4.0'
   spec.dependency 'AppLovinMediationGoogleAdapter', '12.8.0.0'
   spec.dependency 'AppLovinMediationFacebookAdapter', '6.20.1.0'
